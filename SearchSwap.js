@@ -31,7 +31,7 @@ function SearchSwap({ children, term, styles, swap }) {
   };
 
   const checkChildren = child => {
-    const hasChildren = child.props && child.props.children;
+    const hasChildren = child && child.props && child.props.children;
     if (hasChildren && _.isObject(child.props.children)) {
       const alteredChildren = React.Children.map(
         child.props.children,
