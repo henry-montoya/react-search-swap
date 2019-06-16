@@ -1,4 +1,4 @@
-import React from "reac";
+import React from "react";
 import _ from "lodash";
 
 function SearchSwap({ children, term, styles, swap }) {
