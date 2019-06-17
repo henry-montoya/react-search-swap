@@ -1,5 +1,6 @@
 import React from "react";
 import _ from "lodash";
+import PropTypes from "prop-types";
 
 function SearchSwap({ children, term, styles, swap }) {
   if (!term) return children;
@@ -31,7 +32,8 @@ function SearchSwap({ children, term, styles, swap }) {
   };
 
   const checkChildren = child => {
-    const hasChildren = child && child.props && child.props.children;
+    if (!child) return;
+    const hasChildren = child.props && child.props.children;
     if (hasChildren && _.isObject(child.props.children)) {
       const alteredChildren = React.Children.map(
         child.props.children,
@@ -70,3 +72,9 @@ function SearchSwap({ children, term, styles, swap }) {
 }
 
 export default SearchSwap;
+
+SearchSwap.propTypes = {
+  term: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  swap: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  styles: PropTypes.object
+};
