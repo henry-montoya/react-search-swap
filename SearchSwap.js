@@ -50,7 +50,7 @@ function SearchSwap({ children, term, styles, swap }) {
       if (!child.props.children.includes(term)) return child;
       return extendStyles(child);
     } else {
-      if (child.includes(term)) {
+      if (_.isString(child) && child.includes(term)) {
         const textArray = child.split(term);
         const matchSpan = React.createElement("span", {
           style: styles,
