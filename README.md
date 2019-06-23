@@ -73,7 +73,6 @@ class App extends React.Component {
 | term   | string/number | what you'd like to search for within your component     |
 | swap   | string/number | what you'd like to render in place of any matches found |
 | styles |    object     | styles you'd like applied to any matches                |
-| <!--   | caseSensitive | boolean                                                 | whether or not you'd like your search to be case sensitive | --> |
 
 ```
 
