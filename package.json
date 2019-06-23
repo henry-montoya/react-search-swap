@@ -1,6 +1,6 @@
 {
   "name": "react-search-swap",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "tool to find, style, and swap out selected words",
   "main": "SearchSwap.js",
   "author": "Henry Montoya",

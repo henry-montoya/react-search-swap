@@ -2,7 +2,7 @@
 
 A simple tool that makes jsx within your React component searchable, stylable, and swappable.
 
-Demo here: demoUrl
+Demo here: https://codesandbox.io/embed/search-swap-demo-drbln?fontsize=14
 
 Useful for:
 
@@ -13,19 +13,20 @@ Useful for:
 ## Installation
 
 ```bash
-$ npm install react-search-swap --save
+$ npm install react-search-swap
 ```
 
 or
 
-````bash
-$ yarn add react-search-swap --save
+```bash
+$ yarn add react-search-swap
+```
 
 Import in your project:
 
 ```javascript
-import SearchSwap from 'react-search-swap';
-````
+import SearchSwap from "react-search-swap";
+```
 
 ## Usage
 
@@ -38,8 +39,8 @@ class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      term: "lost",
-      swap: "found"
+      term: "My",
+      swap: "Your"
   }
   render () {
     return (
@@ -50,13 +51,13 @@ class App extends React.Component {
             styles={{background: "yellow", color: "red"}}
            >
             <h1 style={{ fontWeight: "bold" }}>
-                Welcome To My Page!
+                Welcome
             </h1>
             <div>
-                This is where I make things happen!
+                To
             </div>
             <h2>
-                What was once lost can now be found!
+                My Page!
             </h2>
           </SearchSwap>
         </div>
@@ -72,3 +73,8 @@ class App extends React.Component {
 | term   | string/number | what you'd like to search for within your component     |
 | swap   | string/number | what you'd like to render in place of any matches found |
 | styles |    object     | styles you'd like applied to any matches                |
+| <!--   | caseSensitive | boolean                                                 | whether or not you'd like your search to be case sensitive | --> |
+
+```
+
+```

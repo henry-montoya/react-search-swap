@@ -2,7 +2,7 @@ import React from "react";
 import _ from "lodash";
 import PropTypes from "prop-types";
 
-function SearchSwap({ children, term, styles, swap }) {
+function SearchSwap({ children, term, styles, swap, caseSensitive }) {
   if (!term) return children;
   const display = swap ? swap : term;
   const extendStyles = child => {
@@ -76,5 +76,6 @@ export default SearchSwap;
 SearchSwap.propTypes = {
   term: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   swap: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  styles: PropTypes.object
+  styles: PropTypes.object,
+  caseSensitive: PropTypes.bool
 };
